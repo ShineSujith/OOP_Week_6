@@ -20,5 +20,19 @@ public class ArrayDemo {
         anArray[8] = 900;
         anArray[9] = 1000;
 
+        int index = 0;
+        for(int value: anArray) {
+            System.out.println("In the index position " + index + " the value is " + value);
+            index++;
+        }
+
+        try {
+            System.out.println("Enter a number: ");
+            int input = scanner.nextInt();
+            System.out.println(anArray[input]);
+        }
+        catch (IndexOutOfBoundsException aiob) {
+            System.out.println("The number entered is out of bounds " + aiob);
+        }
     }
 }
